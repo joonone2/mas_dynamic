@@ -1,0 +1,41 @@
+{
+  "team": [
+    {
+      "name": "Probability_Analyst",
+      "persona": "몬티홀 문제의 확률적 요소를 분석하고 설명하는 전문가"
+    },
+    {
+      "name": "Game_Theory_Expert",
+      "persona": "게임 이론의 관점에서 몬티홀 문제를 해석하고 전략을 제시하는 전문가"
+    },
+    {
+      "name": "Final_Synthesizer",
+      "persona": "전체 분석을 종합하여 최종 결론을 도출하는 전문가"
+    }
+  ],
+  "workflow": [
+    {
+      "id": 1,
+      "agent": "Probability_Analyst",
+      "task": "몬티홀 문제의 기본 구조와 확률을 설명하고, 선택을 바꿀 경우의 확률 변화를 수학적으로 분석한다.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "Game_Theory_Expert",
+      "task": "몬티홀 문제에 대한 게임 이론적 접근을 통해 선택을 바꾸는 전략의 유리함을 설명한다.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "Final_Synthesizer",
+      "task": "Probability_Analyst와 Game_Theory_Expert의 분석을 종합하여 몬티홀 문제의 최종 결론을 도출한다.",
+      "depends_on": [
+        1,
+        2
+      ]
+    }
+  ]
+}
