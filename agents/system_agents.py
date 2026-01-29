@@ -5,9 +5,8 @@ from autogen import AssistantAgent
 
 def _load_prompt(filename):
     """
-    prompts 폴더에서 텍스트 파일을 읽어옵니다.
+    prompts 폴더에서 텍스트 파일을 읽어오기
     """
-    # 현재 파일(system_agents.py)의 상위(agents)의 상위(root) 폴더를 찾음
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     path = os.path.join(base_dir, "prompts", filename)
     

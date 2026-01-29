@@ -66,7 +66,6 @@ class MetaDynamicManager:
             
             print(f"\n>>> [Step {step.get('id') or step.get('step')}] {agent_name} 작업 중...")
 
-            # [수정] 2줄 제한 삭제 & 상세 내용 요구 (원본 그대로 유지)
             prompt = f"""
             [전체 목표 (사용자 질문)]
             "{user_query}"
@@ -85,6 +84,5 @@ class MetaDynamicManager:
             self.step_results[step.get('id') or step.get('step')] = work_res.summary
 
         # --- [5/5] PHASE 5: 보고서 저장 ---
-        # save_report(self.log_dir, user_query, execution_plan, self.step_results)
         
         return self.step_results

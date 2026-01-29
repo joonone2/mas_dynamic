@@ -1,7 +1,6 @@
 from autogen import AssistantAgent
 
 def _format_persona(persona):
-    """원본 클래스의 _format_persona 메서드 로직"""
     if isinstance(persona, dict):
         return ". ".join([f"{k}: {v}" for k, v in persona.items()])
     return str(persona)
