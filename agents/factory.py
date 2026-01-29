@@ -7,7 +7,7 @@ def _format_persona(persona):
     return str(persona)
 
 def create_agent(name, persona, llm_config):
-    """설계도 기반으로 동적 에이전트 생성"""
+    """설계도 기반으로 에이전트 생성"""
     p_str = _format_persona(persona)
     return AssistantAgent(
         name=name,
